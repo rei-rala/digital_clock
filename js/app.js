@@ -43,7 +43,7 @@ setInterval( tick, 1000)
 
 // Cambio de fondos
 let animaciones = ['toTop', 'toTopRight', 'toRight', 'toBottomRight', 'toBottom', 'toBottomLeft', 'toLeft', 'toTopLeft'];
-let fondos = ['img/circulos.jpg', 'img/hearts.jpg', 'img/pared.jpg', 'img/snowflakes.jpg', 'img/tela.jpg', 'img/trama.jpg'];
+let fondos = ['img/circulos.jpg', 'img/hearts.jpg', 'img/pared.jpg', 'img/pared2.jpg', 'img/snowflakes.jpg', 'img/tela.jpg', 'img/trama.jpg'];
 let body_element = document.getElementById('bd');
 
 let randomizeAnimation = function(intervalo) {
