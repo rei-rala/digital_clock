@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nova+Mono&display=swap');
+
+* {
+    margin: 0;
+}
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+body {
+    background-image: url(/img/pared2.jpg);
+    background-size: 500px;
+    background-repeat: repeat;
+}
+
+.contenedor {
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+    border: 10px solid hsl(39, 77%, 83%, 0.75);
+    border-radius: 35px;
+    height: 50%;
+    width: 65%;
+    background-color: pink;
+    box-shadow: 15px 10px 10px hsl(39, 77%, 83%, 0.35);
+    opacity: .9;
+}
+
+.hour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    font-family: 'Nova Mono', monospace;
+    font-size: 15vh;
+    color: black;
+    text-shadow: 10px 5px 5px rgb(252, 242, 223);
+}
+
+.s2 {
+    display: none;
+}
+hr {
+    display: none;
+}
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 8vh;
+    color: black;
+    text-shadow: 10px 5px 5px rgb(252, 242, 223);
+}
+
+@media screen and (max-width:1400px) and (orientation:portrait) {
+    html {
+        background-color: red;
+    }
+    body {
+        width: 100vh;
+        height: 100%;
+    }
+    .contenedor {
+        width: 75%;
+        height: 80%;
+    }
+    .hour {
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: center;
+        height: 90%;
+    }
+    .clock {
+        font-size: 12vh;
+        width: 100%;
+    }
+
+    .separador {
+        transform: rotate(90deg);
+    }
+    .date {
+        font-size: 6vw;
+        height: 10%;
+    }
+    hr {
+        display:block
+    }
+    .s1 {
+        display: none;
+    }
+    .s2 {
+        display: block;
+        font-size: 8vw;
+        text-shadow: 5px -5px 5px rgb(255, 255, 255);
+    }
+}
+
+@media screen and (max-width:1080px) and (orientation:landscape) {
+    html {
+        background-color: red;
+    }
+    body {
+        width: 100%;
+        height: 100vh;
+    }
+    .contenedor {
+        width: 85%;
+        height: 75%;
+    }
+    .hour {
+        width: 100%;
+        height: 70%;
+    }
+    .clock {
+        font-size: 15vw;
+    }
+
+    .date {
+        font-size: 6vw;
+        height: 30%;
+    }
+    hr {
+        display:block
+    }
+
+}
