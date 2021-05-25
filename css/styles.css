@@ -2,23 +2,99 @@
 
 * {
     margin: 0;
+    cursor: default;
 }
 html, body {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     height: 100%;
     width: 100%;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-body {
+#bd {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-image: url(/img/pared2.jpg);
-    background-size: 10%;
+    background-size: 35%;
+    animation: toTopRight;
+    animation-duration: 5s;
+    animation-fill-mode: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     background-repeat: repeat;
 }
 
 
+@keyframes toBottomRight {
+    0% {
+        opacity: 0.15;
+        background-position:0vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:100vh 100vw;
+    }
+}
+
+@keyframes toRight {
+    0% {
+        opacity: 0.15;
+        background-position:100vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:0vh 0vw;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        opacity: 0.15;
+        background-position:100vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:0vh 0vw;
+    }
+}
+
+@keyframes toTopRight {
+    0% {
+        opacity: 0.15;
+        background-position:100vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:0vh 100vw;
+    }
+}
 
 .contenedor {
     display:flex;
@@ -71,6 +147,7 @@ hr {
     body {
         width: 100vh;
         height: 100%;
+        background-size: 200%;
     }
     
     .contenedor {
@@ -115,6 +192,7 @@ hr {
     body {
         width: 100%;
         height: 100vh;
+        background-size: 150%;
     }
     .contenedor {
         width: 85%;

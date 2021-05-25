@@ -42,17 +42,39 @@ let tick = function() {
 setInterval( tick, 1000)
 
 // Cambio de fondos
-let fondos = ['img/circulos.jpg', 'img/hearts.jpg', 'img/pared.jpg', 'img/snowflakes.jpg', 'img/tela.jpg', 'img/trama.jpg']
-let backgroundImage = document.getElementById('bd')
+let animaciones = ['toBottomRight', 'toRight', 'toLeft', 'toTopRight'];
+let fondos = ['img/circulos.jpg', 'img/hearts.jpg', 'img/pared.jpg', 'img/snowflakes.jpg', 'img/tela.jpg', 'img/trama.jpg'];
+let body_element = document.getElementById('bd');
 
-let randomize = function() {
+let randomizeAnimation = function(intervalo) {
+    let item = (Math.floor(Math.random() * animaciones.length));
+    let animCandidata = `${intervalo}s ease-in-out 0s 1 normal none running ${animaciones[item]}`
+    if ( animCandidata == body_element.style.animation ) {
+        // console.warn(`Repitio Animacion, -${animaciones[item]}-`);
+        return randomizeAnimation(intervalo);
+    } else {
+        console.log(`animation ${animCandidata}`);
+        return animCandidata;
+    }
+}
+
+let randomizeBackground = function() {
     let item = (Math.floor(Math.random() * fondos.length));
-    return item
+    let fondoCandidato = `url("${fondos[item]}")`
+    if ( fondoCandidato != body_element.style.backgroundImage ) {
+        console.log(`background-image ${fondoCandidato}`);
+        return fondoCandidato;
+    } else {
+        // console.warn(`Repitio fondo -${fondos[item]}-!`);
+        return randomizeBackground();
+    }
 }
 
-let changeBackground = function() {
-    backgroundImage.style.backgroundImage = `url(${fondos[randomize()]})`
-    console.log(`Cambiado propiedad background-image a ${backgroundImage.style.backgroundImage}`)
+
+let intervalo = () => {
+    let intervaloAsignado = 5000
+    body_element.style.backgroundImage = randomizeBackground();
+    body_element.style.animation = randomizeAnimation(intervaloAsignado/1000)
 }
 
-setInterval( changeBackground, 3000)
+setInterval( intervalo, 5000 );
