@@ -19,7 +19,7 @@ html, body {
     height: 100%;
     background-image: url(/img/pared2.jpg);
     background-size: 35%;
-    animation: toTopRight;
+    animation: toTop;
     animation-duration: 5s;
     animation-fill-mode: alternate;
     animation-iteration-count: infinite;
@@ -27,8 +27,7 @@ html, body {
     background-repeat: repeat;
 }
 
-
-@keyframes toBottomRight {
+@keyframes toTop {
     0% {
         opacity: 0.15;
         background-position:0vh 0vw;
@@ -41,7 +40,24 @@ html, body {
     }
     100% { 
         opacity: 0.05;
-        background-position:100vh 100vw;
+        background-position:0vh 100vw;
+    }
+}
+
+@keyframes toTopRight {
+    0% {
+        opacity: 0.15;
+        background-position:100vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:0vh 100vw;
     }
 }
 
@@ -62,10 +78,27 @@ html, body {
     }
 }
 
-@keyframes toLeft {
+@keyframes toBottomRight {
     0% {
         opacity: 0.15;
-        background-position:100vh 0vw;
+        background-position:100vh 100vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:0vh 0vh;
+    }
+}
+
+@keyframes toBottom {
+    0% {
+        opacity: 0.15;
+        background-position:0vh 100vw;
     }
     30% {
         opacity: 1;
@@ -79,10 +112,10 @@ html, body {
     }
 }
 
-@keyframes toTopRight {
+@keyframes toBottomLeft {
     0% {
         opacity: 0.15;
-        background-position:100vh 0vw;
+        background-position:0vh 100vw;
     }
     30% {
         opacity: 1;
@@ -92,7 +125,41 @@ html, body {
     }
     100% { 
         opacity: 0.05;
-        background-position:0vh 100vw;
+        background-position:100vh 0vw;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        opacity: 0.15;
+        background-position:0vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:100vh 0vw;
+    }
+}
+
+@keyframes toTopLeft {
+    0% {
+        opacity: 0.15;
+        background-position:0vh 0vw;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0.05;
+        background-position:100vh 100vh;
     }
 }
 

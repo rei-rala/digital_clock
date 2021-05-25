@@ -42,7 +42,7 @@ let tick = function() {
 setInterval( tick, 1000)
 
 // Cambio de fondos
-let animaciones = ['toBottomRight', 'toRight', 'toLeft', 'toTopRight'];
+let animaciones = ['toTop', 'toTopRight', 'toRight', 'toBottomRight', 'toBottom', 'toBottomLeft', 'toLeft', 'toTopLeft'];
 let fondos = ['img/circulos.jpg', 'img/hearts.jpg', 'img/pared.jpg', 'img/snowflakes.jpg', 'img/tela.jpg', 'img/trama.jpg'];
 let body_element = document.getElementById('bd');
 
@@ -50,7 +50,7 @@ let randomizeAnimation = function(intervalo) {
     let item = (Math.floor(Math.random() * animaciones.length));
     let animCandidata = `${intervalo}s ease-in-out 0s 1 normal none running ${animaciones[item]}`
     if ( animCandidata == body_element.style.animation ) {
-        // console.warn(`Repitio Animacion, -${animaciones[item]}-`);
+        console.warn(`Repitio Animacion, -${animCandidata}-`);
         return randomizeAnimation(intervalo);
     } else {
         console.log(`animation ${animCandidata}`);
@@ -72,9 +72,9 @@ let randomizeBackground = function() {
 
 
 let intervalo = () => {
-    let intervaloAsignado = 5000
+    let intervaloAsignado = 5
     body_element.style.backgroundImage = randomizeBackground();
-    body_element.style.animation = randomizeAnimation(intervaloAsignado/1000)
+    body_element.style.animation = randomizeAnimation(intervaloAsignado)
 }
 
 setInterval( intervalo, 5000 );
