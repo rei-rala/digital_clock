@@ -14,8 +14,12 @@ html, body {
 
 body {
     background-image: url(/img/pared2.jpg);
-    background-size: 500px;
+    background-size: 350px;
     background-repeat: repeat;
+}
+
+.precarga {
+    display: none;
 }
 
 .contenedor {
