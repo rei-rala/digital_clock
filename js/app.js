@@ -77,4 +77,7 @@ let intervalo = () => {
     body_element.style.animation = randomizeAnimation(intervaloAsignado)
 }
 
+// Primera ejecucion
+intervalo()
+// Intervalos
 setInterval( intervalo, 5000 );
