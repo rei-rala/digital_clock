@@ -18,4 +18,8 @@ v1.1 - 25/05/2021
   
 v1.1.1  
 +Añadidos sentidos restantes completando 8 animaciones  
-+Tweaks leves
++Tweaks leves  
+  
+  
+v1.1.2 03/26/2021  
++Pequeño tweak JS en codigo para reducir la interaccion con objetos del dom y su actualizacion

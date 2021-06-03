@@ -9,16 +9,16 @@ let second_html = document.getElementById('second')
 let date_html = document.getElementById('date')
 
 let date = function(date) {
-    date_html.innerHTML = `${days[date.getDay()]},  ${date.getDate()} de ${month[date.getMonth()].toLowerCase()}`;
-}
+    date_html.innerHTML == `${days[date.getDay()]},  ${date.getDate()} de ${month[date.getMonth()].toLowerCase()}` ? {} : date_html.innerHTML = `${days[date.getDay()]},  ${date.getDate()} de ${month[date.getMonth()].toLowerCase()}`;
+};
 
 let check = (time) => {
     if (rounds.includes(time)) {
-        return `0${+time.toString()}`
+        return `0${+time.toString()}`;
     } else {
-        return time
-    }
-}
+        return time;
+    };
+};
 
 let tick = function() {
     let clock = new Date();
@@ -27,19 +27,20 @@ let tick = function() {
     let minute = check( clock.getMinutes() );
     let second = check( clock.getSeconds() );
 
-    hour_html.innerHTML = hour;
-    minute_html.innerHTML = minute;
-    second_html.innerHTML = second;
+
+    hour_html.innerHTML   == hour   ? {} : hour_html.innerHTML   = hour  ;
+    minute_html.innerHTML == minute ? {} : minute_html.innerHTML = minute;
+    second_html.innerHTML == second ? {} : second_html.innerHTML = second;
 
     let timer = `${hour}\:${minute}\:${second}`
-    console.log( timer );
+    //console.log( timer );
     if( date_html != clock ) {
-        date(clock)
+        date(clock);
     }
 }
 
 // Ejecucion secuencialpara actualizaciones
-setInterval( tick, 1000)
+setInterval( tick, 1000);
 
 // Cambio de fondos
 let animaciones = ['toTop', 'toTopRight', 'toRight', 'toBottomRight', 'toBottom', 'toBottomLeft', 'toLeft', 'toTopLeft'];
@@ -48,21 +49,21 @@ let body_element = document.getElementById('bd');
 
 let randomizeAnimation = function(intervalo) {
     let item = (Math.floor(Math.random() * animaciones.length));
-    let animCandidata = `${intervalo}s ease-in-out 0s 1 normal none running ${animaciones[item]}`
+    let animCandidata = `${intervalo}s ease-in-out 0s 1 normal none running ${animaciones[item]}`;
     if ( animCandidata == body_element.style.animation ) {
-        console.warn(`Repitio Animacion, -${animCandidata}-`);
+        //console.warn(`Repitio Animacion, -${animCandidata}-`);
         return randomizeAnimation(intervalo);
     } else {
-        console.log(`animation ${animCandidata}`);
+        //console.log(`animation ${animCandidata}`);
         return animCandidata;
     }
 }
 
 let randomizeBackground = function() {
     let item = (Math.floor(Math.random() * fondos.length));
-    let fondoCandidato = `url("${fondos[item]}")`
+    let fondoCandidato = `url("${fondos[item]}")`;
     if ( fondoCandidato != body_element.style.backgroundImage ) {
-        console.log(`background-image ${fondoCandidato}`);
+        //console.log(`background-image ${fondoCandidato}`);
         return fondoCandidato;
     } else {
         // console.warn(`Repitio fondo -${fondos[item]}-!`);
@@ -72,9 +73,9 @@ let randomizeBackground = function() {
 
 
 let intervalo = () => {
-    let intervaloAsignado = 5
+    let intervaloAsignado = 5;
     body_element.style.backgroundImage = randomizeBackground();
-    body_element.style.animation = randomizeAnimation(intervaloAsignado)
+    body_element.style.animation = randomizeAnimation(intervaloAsignado);
 }
 
 setInterval( intervalo, 5000 );
