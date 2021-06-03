@@ -16,10 +16,10 @@ v1.1 - 25/05/2021
 -Primer switch de fondo y animacion puede tosquearse  
   
   
-v1.1.1  
+v1.1.1 26/05/2021  
 +Añadidos sentidos restantes completando 8 animaciones  
 +Tweaks leves  
   
   
-v1.1.2 03/26/2021  
+v1.1.2 03/06/2021  
 +Pequeño tweak JS en codigo para reducir la interaccion con objetos del dom y su actualizacion
