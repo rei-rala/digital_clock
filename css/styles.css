@@ -202,14 +202,14 @@ hr {
 
 .custom {
     position: absolute;
-    width: 25%;
+    width: 50%;
+    height: 5%;
 
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 8%;
     flex-flow: row;
-    column-gap: 5%;
-    height: 4%;
-    bottom: 1%;
+    bottom: 5%;
     left: auto;
 }
 
@@ -220,7 +220,7 @@ hr {
     align-items: center;
     text-align: center;
     padding: 1%;
-    width: 25%;
+    width: 15%;
     height: 100%;
     background-color: pink;
     border: 1px solid hsl(39, 77%, 83%, 0.75);
@@ -318,9 +318,13 @@ hr {
     .reduce {
         display: flex;
     }
+    .custom {
+        bottom: 1%;
+        width: 50%;
+    }
 }
 
-@media screen and (max-width:1080px) and (orientation:landscape) {
+@media screen and (max-width:800px) and (orientation:landscape) {
     html {
         background-color: red;
     }
@@ -348,5 +352,17 @@ hr {
     hr {
         display:block
     }
-
+    .custom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        bottom: auto;
+        right: 0.5%;
+        height: 30%;
+        width: 10%;
+    }
+    .custom div {
+        width: 50%;
+        height: 25%;
+    }
 }

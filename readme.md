@@ -26,4 +26,4 @@ v1.1.2 03/06/2021
   
   
 v1.1.3 03/06/2021  
-+Funcionalidad para cambiar color de fuente y de fondo  
++Funcionalidad para cambiar color de fuente y de fondo, animado entre cada switch  
