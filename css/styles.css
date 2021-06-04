@@ -17,14 +17,6 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(/img/pared2.jpg);
-    background-size: 35%;
-    animation: toTop;
-    animation-duration: 5s;
-    animation-fill-mode: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    background-repeat: repeat;
 }
 
 @keyframes toTop {
@@ -168,13 +160,13 @@ html, body {
     flex-flow: column;
     text-align: center;
     justify-content: center;
-    border: 10px solid hsl(39, 77%, 83%, 0.75);
     border-radius: 35px;
     height: 50%;
     width: 65%;
     background-color: pink;
+    border: 10px solid hsl(39, 77%, 83%, 0.75);
     box-shadow: 15px 10px 10px hsl(39, 77%, 83%, 0.35);
-    opacity: .9;
+    opacity: 0.999999;
 }
 
 .hour {
@@ -205,6 +197,76 @@ hr {
     font-size: 8vh;
     color: black;
     text-shadow: 10px 5px 5px rgb(252, 242, 223);
+}
+
+
+.custom {
+    position: absolute;
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    column-gap: 5%;
+    height: 4%;
+    bottom: 1%;
+    left: auto;
+}
+
+.custom div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1%;
+    width: 25%;
+    height: 100%;
+    background-color: pink;
+    border: 1px solid hsl(39, 77%, 83%, 0.75);
+    border-radius: 5px;
+    box-shadow: 15px 10px 10px hsl(39, 77%, 83%, 0.35);
+}
+
+.custom div > * {
+    align-content: center;
+    border: none;
+    padding: 1px;
+    width: 70%;
+    height: 50%;
+    margin-bottom: 0;
+}
+
+
+.reduced {
+    display: none;
+}
+
+
+.aparecer {
+    animation: aparecer 1s 1;
+}
+.desaparecer {
+    animation: desaparecer 1s 1;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width:1400px) and (orientation:portrait) {
@@ -249,6 +311,12 @@ hr {
         display: block;
         font-size: 8vw;
         text-shadow: 5px -5px 5px rgb(255, 255, 255);
+    }
+    .full {
+        display: none;
+    }
+    .reduce {
+        display: flex;
     }
 }
 

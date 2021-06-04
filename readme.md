@@ -22,4 +22,8 @@ v1.1.1 26/05/2021
   
   
 v1.1.2 03/06/2021  
-+Pequeño tweak JS en codigo para reducir la interaccion con objetos del dom y su actualizacion
++Pequeño tweak JS en codigo para reducir la interaccion con objetos del dom y su actualizacion  
+  
+  
+v1.1.3 03/06/2021  
++Funcionalidad para cambiar color de fuente y de fondo  
